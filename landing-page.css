@@ -1,0 +1,548 @@
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.eot");
+  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.woff2") format("woff2"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.woff") format("woff"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype"),
+    url("../fonts/Bebas_Neue/BebasNeue-Regular.svg#BebasNeue-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anton";
+  src: url("../fonts/Anton/Anton-Regular.eot");
+  src: url("../fonts/Anton/Anton-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Anton/Anton-Regular.woff2") format("woff2"),
+    url("../fonts/Anton/Anton-Regular.woff") format("woff"),
+    url("../fonts/Anton/Anton-Regular.ttf") format("truetype"),
+    url("../fonts/Anton/Anton-Regular.svg#Anton-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Haettenschweiler";
+  src: url("../fonts/haettenschweiler/Haettenschweiler.eot");
+  src: url("../fonts/haettenschweiler/Haettenschweiler.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/haettenschweiler/Haettenschweiler.woff2") format("woff2"),
+    url("../fonts/haettenschweiler/Haettenschweiler.woff") format("woff"),
+    url("../fonts/haettenschweiler/Haettenschweiler.ttf") format("truetype"),
+    url("../fonts/haettenschweiler/Haettenschweiler.svg#Haettenschweiler")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Medium.eot");
+  src: url("../fonts/poppins/Poppins-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Medium.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Medium.ttf") format("truetype"),
+    url("../fonts/poppins/Poppins-Medium.svg#Poppins-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Bold.eot");
+  src: url("../fonts/poppins/Poppins-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Bold.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Bold.ttf") format("truetype"),
+    url("../fonts/poppins/Poppins-Bold.svg#Poppins-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --golden: #e2af44;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--white);
+  font-family: "Bebas Neue";
+  max-width: 480px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 1;
+  color: var(--white);
+  font-weight: 400;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 36px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 21px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--black);
+  margin-bottom: 15px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  line-height: 1.2;
+  color: inherit;
+  font-family: inherit;
+}
+span {
+  display: inline-block;
+}
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+.btn-check:focus + .btn,
+.btn:focus {
+  box-shadow: none;
+}
+:focus-visible {
+  outline: none;
+}
+
+/* Home Start *********************************************/
+.home {
+  background-image: url(banner.png);
+  height: 100dvh;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: var(--white);
+}
+
+/* 🌟 CRUCIAL: Ensures the wrapper link covers the entire section */
+.full-page-link {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* CRITICAL MOBILE RESPONSIVENESS ADJUSTMENT */
+.home-inner {
+  display: flex;
+  align-items: center;
+  /* Adjusted for better vertical spacing on mobile */
+  justify-content: space-between;
+  flex-direction: column;
+  /* Adjusted to let justify-content handle spacing */
+  row-gap: 0;
+  text-align: center;
+  /* Ensures it fills the full height of .home */
+  height: 100%;
+  width: 100%;
+}
+.home-inner .top-content-bx {
+  width: 100%;
+  margin: 0 auto;
+}
+.home-inner .top-content-bx h1 {
+  font-size: 110px;
+  line-height: 110px;
+  font-family: "Haettenschweiler";
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.home-inner .btm-content-bx {
+  max-width: 70%;
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.white-box {
+  max-width: 90%;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}
+.white-box h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 40px;
+  background-color: var(--white);
+  font-family: "poppins";
+  color: var(--black);
+  font-weight: bold;
+  border-radius: 30px;
+  margin: 0 auto 10px;
+  padding: 5px;
+  position: relative;
+}
+.white-box h2::before,
+.white-box h2::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--black);
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.white-box h2::before {
+  left: 20px;
+}
+.white-box h2::after {
+  right: 20px;
+}
+
+/* FIX APPLIED HERE: Centering the logo image */
+.logo-box img {
+  max-width: 70%;
+  width: 100%;
+  /* Sets top/bottom margin, and centers horizontally */
+  margin: 10px auto 5px;
+}
+/* END FIX */
+
+.middle-text-box h3 {
+  font-size: 45px;
+  text-transform: uppercase;
+}
+.center-part {
+  width: 100%;
+  max-width: 90%;
+}
+.line-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 20px;
+  font-family: "Poppins";
+  text-transform: uppercase;
+}
+.line-text span.line {
+  width: 35%;
+  height: 2px;
+  background: var(--white);
+}
+.middle-btn-box span {
+  background: var(--white);
+  color: var(--black);
+  padding: 3px;
+  border-radius: 50px;
+  text-align: center;
+  width: 45%;
+  font-size: 20px;
+}
+
+/* 🌟 KEY CHANGE APPLIED HERE: Increased margin-bottom to 40px for a larger gap */
+.middle-btn-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.bonas-sec {
+  border: #e2af44;
+}
+
+/* 🌟 ADJUSTMENT: Set margin-top to 0 to minimize empty space above bonas line */
+.btm-part {
+  margin-top: 0;
+}
+
+/* MODIFIED: Changed flex-direction to 'row' to place items on one line */
+.boxes {
+  width: 70%; /* Adjusted width for better row layout */
+  display: flex;
+  flex-direction: row; /* **KEY CHANGE** */
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* 🌟 ADJUSTMENT: Reduced padding to 5px top/bottom to shorten the boxes */
+.boxes .box {
+  padding: 15px 10px;
+  text-align: center;
+  flex: 1 1 50%; /* **KEY CHANGE** - Makes boxes share space equally */
+  font-size: 25px;
+  color: var(--black);
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+}
+.golden-gradient {
+  background: url(btn-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style for the bottom sports image without a background box */
+.bottom-sports-image {
+  max-width: 75%;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0;
+}
+
+/* 🌟 ADJUSTMENT: Applied zoom-in to the image itself */
+.zoom-in {
+  animation: zoomPulse 1s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* NEW STYLES: 2% INSTANT BONAS with outline border */
+.instant-bonas-text {
+  font-size: 25px;
+  font-family: "Bebas Neue";
+  text-transform: uppercase;
+  color: var(--golden);
+  /* 🌟 ADJUSTMENT: Increased margin-bottom to 25px for space below the bonus line */
+  margin-bottom: 25px;
+  display: block;
+  padding: 5px 10px;
+  border: 3px solid var(--white);
+  border-radius: 8px;
+  text-shadow: 1px 1px 2px var(--black);
+}
+/* END NEW STYLES */
+
+/* Responsive ******************************/
+@media (max-width: 1399px) {
+  .logo-box img {
+    max-width: 60%;
+    margin: 10px auto 5px;
+  } /* Ensure center on small screen */
+  .home-inner .top-content-bx h1 {
+    font-size: 90px;
+    line-height: 90px;
+  }
+  .middle-text-box h3 {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+  .home-inner .btm-content-bx {
+    max-width: 65%;
+    margin: 0px auto;
+    margin-bottom: 0px;
+  }
+  /* MODIFIED: Adjusted box size for desktop/tablet */
+  .boxes {
+    width: 90%;
+  }
+  .boxes .box {
+    padding: 5px;
+    font-size: 30px;
+  }
+  .boxes {
+    gap: 10px;
+  }
+  .white-box {
+    max-width: 80%;
+  }
+  .white-box h2 {
+    font-size: 23px;
+  }
+  .bottom-sports-image {
+    max-width: 70%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .white-box {
+    max-width: 100%;
+  }
+  .line-text {
+    font-size: 15px;
+    gap: 5px;
+  }
+  .boxes .box {
+    padding: 5px;
+  }
+  .home-inner .btm-content-bx {
+    max-width: 80%;
+    margin: 0px auto;
+    margin-bottom: 0px;
+  }
+  /* MODIFIED: Adjusted box size for mobile */
+  .boxes {
+    width: 90%;
+  }
+  .bottom-sports-image {
+    max-width: 90%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 479px) {
+  .home-inner .top-content-bx h1 {
+    font-size: 80px;
+    line-height: 85px;
+  }
+  .white-box h2 {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 90%;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .logo-box img {
+    margin: 0 auto 10px;
+    max-width: 70%;
+  }
+  .middle-text-box h3 {
+    font-size: 45px;
+    margin-bottom: 0px;
+  }
+  .center-part {
+    max-width: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+  }
+  .instant-bonas-text {
+    font-size: 20px;
+    padding: 3px 8px;
+    margin-top: 20px;
+  }
+  .boxes {
+    width: 90%;
+  }
+  .bottom-sports-image {
+    max-width: 95%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .home-inner .top-content-bx h1 {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 5px;
+  }
+  .home-inner {
+    /* Resetting row-gap here to 0 is important after the global change */
+    row-gap: 0;
+    padding: 30px 0 0;
+  }
+  .middle-btn-box span {
+    font-size: 17px;
+  }
+  .logo-box img {
+    max-width: 70%;
+  }
+  .middle-text-box h3 {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+  .white-box h2 {
+    font-size: 15px;
+  }
+  .boxes .box {
+    font-size: 25px;
+  }
+  .instant-bonas-text {
+    font-size: 17px;
+  }
+  .bottom-sports-image {
+    max-width: 100%;
+    margin-top: 5px;
+  }
+}
